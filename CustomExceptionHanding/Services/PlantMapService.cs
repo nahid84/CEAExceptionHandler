@@ -1,4 +1,4 @@
-﻿using CEASystemExceptions;
+﻿using Exceptions;
 using Services.Models;
 using System.Collections.Generic;
 

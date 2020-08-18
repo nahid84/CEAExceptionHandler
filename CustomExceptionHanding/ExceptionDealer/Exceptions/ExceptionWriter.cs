@@ -1,4 +1,4 @@
-﻿using CEASystemExceptions;
+﻿using Exceptions;
 using Microsoft.AspNetCore.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +9,7 @@ namespace ExceptionDealer.Exceptions
     {
         private const string CONTENT_TYPE = "application/json";
 
-        public static Task WriteUserExceptionResponse(HttpResponse response, CEAException ex)
+        public static Task WriteUserExceptionResponse(HttpResponse response, BaseException ex)
         {
             response.StatusCode = (int) ex.StatusCode;
             response.ContentType = CONTENT_TYPE;

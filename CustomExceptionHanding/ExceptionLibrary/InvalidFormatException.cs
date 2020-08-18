@@ -1,8 +1,8 @@
 ﻿using System.Net;
 
-namespace CEASystemExceptions
+namespace Exceptions
 {
-    public class InvalidFormatException : CEAException
+    public class InvalidFormatException : BaseException
     {
         public InvalidFormatException(string devMessage) : base(devMessage)
         {

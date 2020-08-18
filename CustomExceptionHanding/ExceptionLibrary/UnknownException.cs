@@ -1,8 +1,8 @@
 ﻿using System.Net;
 
-namespace CEASystemExceptions
+namespace Exceptions
 {
-    public class UnknownException : CEAException
+    public class UnknownException : BaseException
     {
         public UnknownException(string devMessage) : base(devMessage)
         {

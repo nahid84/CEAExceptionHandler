@@ -1,4 +1,4 @@
-﻿using CEASystemExceptions;
+﻿using Exceptions;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Threading.Tasks;
@@ -24,19 +24,19 @@ namespace ExceptionDealer.Exceptions
             }
             catch(Exception ex)
             {
-                if (ex is CEAException)
+                if (ex is BaseException)
                 {
-                    await HandleException(context, ex as CEAException);
+                    await HandleException(context, ex as BaseException);
                 } 
                 else
                 {
                     await HandleException(context, 
-                                          new UnknownException(UNKOWN_EX_MESSAGE) { UserMessage = UNKOWN_EX_MESSAGE} as CEAException);
+                                          new UnknownException(UNKOWN_EX_MESSAGE) { UserMessage = UNKOWN_EX_MESSAGE} as BaseException);
                 }
             }
         }
 
-        private Task HandleException(HttpContext context, CEAException ex)
+        private Task HandleException(HttpContext context, BaseException ex)
         {
             return ExceptionWriter.WriteUserExceptionResponse(context.Response, ex);
         }

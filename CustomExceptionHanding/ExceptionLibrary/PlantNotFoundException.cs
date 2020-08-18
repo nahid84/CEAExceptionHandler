@@ -1,8 +1,8 @@
 ﻿using System.Net;
 
-namespace CEASystemExceptions
+namespace Exceptions
 {
-    public class PlantNotFoundException : CEAException
+    public class PlantNotFoundException : BaseException
     {
         public PlantNotFoundException(string devMessage) : base(devMessage)
         {

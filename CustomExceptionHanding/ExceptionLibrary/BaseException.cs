@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Net;
 
-namespace CEASystemExceptions
+namespace Exceptions
 {
-    public class CEAException : Exception
+    public class BaseException : Exception
     {
         public HttpStatusCode StatusCode { get; protected set; }
 
         public string UserMessage { get; set; }
 
-        public CEAException(string message) : base(message) { }
+        public BaseException(string message) : base(message) { }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System.Net;
 
-namespace CEASystemExceptions
+namespace Exceptions
 {
-    public class InvalidTenantException : CEAException
+    public class InvalidTenantException : BaseException
     {
         public InvalidTenantException(string devMessage) : base(devMessage)
         {

@@ -1,8 +1,8 @@
 ﻿using System.Net;
 
-namespace CEASystemExceptions
+namespace Exceptions
 {
-    public class InvalidResolutionException : CEAException
+    public class InvalidResolutionException : BaseException
     {
         public InvalidResolutionException(string devMessage) : base(devMessage)
         {

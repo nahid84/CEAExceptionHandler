@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExceptionLibrary\CEASystemExceptions.csproj" />
+    <ProjectReference Include="..\ExceptionLibrary\Exceptions.csproj" />
   </ItemGroup>
 
 </Project>
